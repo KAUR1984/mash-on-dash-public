@@ -1,0 +1,56 @@
+{
+  "allPlugins": [
+    {"pluginname": "Dandelion Plugin",
+      "homePageUrl": "www.dandelion.eu",
+      "methods": [
+        {
+          "methodName": "configure",
+          "methodDescription": "Configure the API",
+          "arguments": ["apiKey"],
+          "inputType": "string",
+          "outputType": "none"
+        },
+        {
+          "methodName": "authenticate",
+          "methodDescription": "Authenticate the API access",
+          "arguments": ["none"],
+          "inputType": "none",
+          "outputType": "none"
+        },
+        {
+          "methodName": "getEntities",
+          "methodDescription": "Extract the main entities from the text provided",
+          "arguments": ["text"],
+          "inputType": "string",
+          "outputType": "list of strings"
+        }
+      ]
+    },
+    {"pluginname": "JSON Plugin",
+      "homePageUrl": "www.json.org",
+      "methods": [
+        {
+          "methodName": "configure",
+          "methodDescription": "Configure the plugin with a desirable directory path",
+          "arguments": ["directory_path"],
+          "inputType": "string",
+          "outputType": "none"
+        },
+        {
+          "methodName": "export_list_of_dicts_into_json",
+          "methodDescription": "Write a list of dictionaries into a json file",
+          "arguments": ["lst_dicts","file_name"],
+          "inputType": ["list of dictionaries", "string"],
+          "outputType": "string"
+        },
+        {
+          "methodName": "read_json_to_lst_of_dicts",
+          "methodDescription": "Read data from a json file and returns a list of dictionaries",
+          "arguments": ["file_name"],
+          "inputType": ["string"],
+          "outputType": "list of dictionaries"
+        }
+      ]
+    }
+  ]
+}

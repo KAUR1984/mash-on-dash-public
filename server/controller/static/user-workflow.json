@@ -1,0 +1,10 @@
+{
+  "workflows": [
+    {"workflow": [
+      "INPUT_CARD",
+      {"PLUGIN_CARD": "Dandelion Plugin"},
+      "PROCESSING CARD",
+      "OUTPUT_CARD"]
+    }
+  ]
+}

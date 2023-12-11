@@ -1,0 +1,1041 @@
+<!--
+===================================================
+* Date: 18th February 2022
+* Author: Jasmeen Kaur
+* Project: Mash-on-Dash
+* Organisation: The Australian National University
+===================================================
+-->
+
+<!--
+App UI Skeleton:
+=========================================================
+* Material Dashboard 2 - v3.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../static/assets/img/apple-icon.png">
+    <link rel="icon" type="image/x-icon" href="../static/assets/img/favicon.ico">
+
+    <!--  Custom Stylesheets -->
+    <link rel="stylesheet" href="../static/assets/css/home-page.css">
+
+    <title>
+        Create a workflow
+    </title>
+
+    <!-- Fonts and icons -->
+    <link rel="stylesheet"
+          type="text/css"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700"/>
+
+    <!-- Nucleo Icons -->
+    <link href="../static/assets/css/nucleo-icons.css" rel="stylesheet"/>
+    <link href="../static/assets/css/nucleo-svg.css" rel="stylesheet"/>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../static/assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet"/>
+
+    <!-- Jquery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+
+    <!--    <script>-->
+    <!--        $(document).ready(function () {-->
+    <!--            $("#test-12").click(function () {-->
+    <!--                $("#card-test").load("data2.txt");-->
+    <!--            });-->
+    <!--        });-->
+    <!--    </script>-->
+</head>
+
+<body class="g-sidenav-show  bg-gray-200">
+
+<main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur">
+        <div class="container-fluid py-1 px-3">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+                    <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark"
+                                                           href="{{url_for('pages.view_base')}}">Dashboard</a>
+                    </li>
+                    <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Create-a-Mash</li>
+                </ol>
+                <h6 class="font-weight-bolder mb-0">Create a Mash</h6>
+            </nav>
+            <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+                <div class="ms-md-auto pe-md-3 d-flex align-items-center">
+                    <div class="input-group input-group-outline">
+                        <label class="form-label">Search here...</label>
+                        <input type="text" class="form-control">
+                    </div>
+                </div>
+                <ul class="navbar-nav  justify-content-end">
+                    <li class="nav-item d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body font-weight-bold px-0">
+                            <i class="fa fa-user me-sm-1"></i>
+                            <span class="d-sm-inline d-none">Sign In</span>
+                        </a>
+                    </li>
+                    <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+                            <div class="sidenav-toggler-inner">
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                                <i class="sidenav-toggler-line"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item px-3 d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body p-0">
+                            <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown pe-2 d-flex align-items-center">
+                        <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-bell cursor-pointer"></i>
+                        </a>
+                        <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4"
+                            aria-labelledby="dropdownMenuButton">
+                            <li class="mb-2">
+                                <a class="dropdown-item border-radius-md" href="javascript:;">
+                                    <div class="d-flex py-1">
+                                        <div class="my-auto">
+                                            <img src="../static/assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="text-sm font-weight-normal mb-1">
+                                                <span class="font-weight-bold">New message</span> from Laur
+                                            </h6>
+                                            <p class="text-xs text-secondary mb-0">
+                                                <i class="fa fa-clock me-1"></i>
+                                                13 minutes ago
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a class="dropdown-item border-radius-md" href="javascript:;">
+                                    <div class="d-flex py-1">
+                                        <div class="my-auto">
+                                            <img src="../static/assets/img/small-logos/logo-spotify.svg"
+                                                 class="avatar avatar-sm bg-gradient-dark  me-3 ">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="text-sm font-weight-normal mb-1">
+                                                <span class="font-weight-bold">New album</span> by Travis Scott
+                                            </h6>
+                                            <p class="text-xs text-secondary mb-0">
+                                                <i class="fa fa-clock me-1"></i>
+                                                1 day
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item border-radius-md" href="javascript:;">
+                                    <div class="d-flex py-1">
+                                        <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
+                                            <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                <title>credit-card</title>
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF"
+                                                       fill-rule="nonzero">
+                                                        <g transform="translate(1716.000000, 291.000000)">
+                                                            <g transform="translate(453.000000, 454.000000)">
+                                                                <path class="color-background"
+                                                                      d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
+                                                                      opacity="0.593633743"></path>
+                                                                <path class="color-background"
+                                                                      d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="text-sm font-weight-normal mb-1">
+                                                Payment successfully completed
+                                            </h6>
+                                            <p class="text-xs text-secondary mb-0">
+                                                <i class="fa fa-clock me-1"></i>
+                                                2 days
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <div class="container-fluid py-4 w-80">
+        <div class="card offset-md-10 mb-4">
+            <div class="row my-2 justify-content-center">
+                <div class="col-md-3 col-sm-4 text-center ms-md-1">
+                    <a href="{{url_for('pages.create_a_workflow')}}">
+                        <i class="row material-icons justify-content-center opacity-10 text-dark"
+                           style="font-size: 30px">list</i>
+                        <span class="row justify-content-center" style="font-size: 0.7rem">Outline</span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 text-center me-md-1">
+                    <a href="{{url_for('pages.create_a_workflow')}}">
+                        <i class="row material-icons justify-content-center opacity-10 text-dark "
+                           style="font-size: 30px">error</i>
+                        <span class="row justify-content-center" style="font-size: 0.7rem">Errors</span>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 text-center me-md-1">
+                    <a href="{{url_for('pages.create_a_workflow')}}">
+                        <i class="row material-icons justify-content-center opacity-10 text-dark "
+                           style="font-size: 30px">help</i>
+                        <span class="row justify-content-center" style="font-size: 0.7rem">Help</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- TODO make name a mash input -->
+
+        <!-- Input card -->
+        <div id="card0">
+            <div class="row ">
+                <div class="card" style="background-color: #C7CCD0">
+                    <div class="card-header p-0 pt-0" style="background-color: #C7CCD0">
+                        <h4 class="mb-0">
+                            <div class="row d-inline-flex">
+                                <div class="card" style="background-color: #272628; width: 62px; height: 52px">
+                                    <i class="draw-icon-sizing text-light material-icons opacity-10 mt-1 ms-0 md-light"
+                                       style="font-size: 40px">
+                                        draw
+                                    </i>
+                                </div>
+                                <span id="processingtab0" class="processingtab col mt-2 mb-2" style="color: black">
+                                    Choose Input
+                                </span>
+                            </div>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    <div class="row align-items-center justify-content-center">
+                        <!-- API Div-->
+                        <div class="col-md-3 min-height-400 mx-4 card my-4" style="background-color: #F0F2F5">
+                            <h5 class="mt-3">1. From API</h5>
+                            <hr class="mt-0">
+                            Select APIs from existing plugins:
+                            <div class="pe-md-3 mt-3">
+                                <div class="input-group input-group-outline">
+                                    <label class="form-label">Search API plugins...</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                            <br>
+
+                            <!-- Display the list of API plugins-->
+                            {% for list_item in list_api_plugins %}
+                            <li class="row mx-1 mb-1" style="list-style-type: none">
+                                <!-- For removing the bullets in a list -->
+                                <div class="card rounded-2 col-1 p-0" style="width: 22px; height: 22px">
+                                    <i class="material-icons" style="color: darkslategray">draw</i>
+                                    <!-- <img src="https://google.com/favicon.ico" alt="website-logo">-->
+                                </div>
+                                <!--                                <script>-->
+                                <!--                                    let plugin_name = '{{list_item}}'-->
+                                <!--                                </script>-->
+                                <!-- Pipe filters in the jinja expression below are important, or else unexpected behaviour might occur https://jinja.palletsprojects.com/en/3.1.x/templates/#filters-->
+                                <a class="api-links col text-bold"
+                                   id="api-link-{{loop.index}}"
+                                   onclick="addPluginCard('{{list_item|striptags|title}}', 'card0')"
+                                   href="#btn1">
+                                    {{ list_item }}
+                                </a>
+                            </li>
+                            {% endfor %}
+                        </div>
+
+                        <!-- Local files Div-->
+                        <div class="col-md-3 min-height-400 mx-4 card my-4" style="background-color: #F0F2F5">
+                            <h5 class="mt-3">2. From Local Files</h5>
+                            <hr class="mt-0">
+                            Upload files from your local computer:
+                            <label for="file-upload" class="custom-file-upload mt-7 text-light bold text-center">
+                                Upload
+                            </label>
+                            <input id="file-upload" type="file"/>
+                            <span class="text-center">.csv, .json, .txt</span>
+                        </div>
+
+                        <!--From online database-->
+                        <div class="col-md-3 min-height-400 mx-4 card my-4" style="background-color: #F0F2F5">
+                            <h5 class="mt-3">3. From online database</h5>
+                            <hr class="mt-0">
+                            Input URL of the online data source:
+                            <div class="pe-md-3 mt-3">
+                                <div class="input-group input-group-outline">
+                                    <label class="form-label">Enter URL...</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add workflow button-->
+            <div id="btn1" class="my-0">
+                <hr class="mt-0" width="1" size="70"
+                    style="z-index: 0; position: absolute; margin-left: auto; margin-right: auto; text-align: center; left: 0; right: 0;">
+                <div class="text-center align-items-center mt-3"
+                     style="z-index: 1; position: absolute; margin-left: auto; margin-right: auto; text-align: center; left: 0; right: 0;">
+                    <a onclick="add_workflow_card(1)">
+                        <i class="row material-icons justify-content-center opacity-10 text-dark "
+                           style="font-size: 35px; fill: black; position: relative">add_circle</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--Processing card-->
+        <div id="card1">
+            <div id="card1-row">
+                <div class="row mt-6 ">
+                    <div class="card" style="background-color: #C7CCD0">
+                        <div class="card-header p-0 pt-0" style="background-color: #C7CCD0">
+                            <h4 class="mb-0">
+                                <div class="row d-inline-flex">
+                                    <div class="card" style="background-color: #272628; width: 62px; height: 52px">
+                                        <i class="draw-icon-sizing text-light material-icons opacity-10 mt-1 ms-0 md-light"
+                                           style="font-size: 40px">
+                                            extension
+                                        </i>
+                                    </div>
+                                    <span class="processingtab col mt-2 mb-2" style="color: black">
+                                    Processing
+                                </span>
+                                </div>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card min-height-100">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 col-sm-12 mt-3 mb-4 me-6 ms-sm-6 ms-lg-0">
+                            <span class="text-bold">Choose from existing plugins:</span>
+                            <div class="input-group input-group-outline mt-3 mb-3 me-4">
+                                <label class="form-label">Search API plugins...</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <!--                            <div id="card-test">-->
+                            <!--                                <p>this is the ajax card test.</p>-->
+                            <!--                            </div>-->
+                            <!--                            <button id="test-12" onclick="retrievePluginInfo('dandelion plugin')">Click me</button>-->
+                            <!-- Display the list of first 16 plugins (8 plugins in each column)-->
+                            <!-- At the end show how many are left (and 20 more...) -->
+                            <div class="row">
+                                <div class="col">
+                                    {% for list_item in first_eight_list_of_default_plugins %}
+                                    <!-- Display the first 8 plugins out of 16 -->
+                                    <li class="row mx-1 mb-1 my-3" style="list-style-type: none">
+                                        <!-- For removing the bullets in a list -->
+                                        <div class="card rounded-2 p-0" style="width: 22px; height: 22px">
+                                            <i class="material-icons" style="color: darkslategray">draw</i>
+                                            <!-- <img src="https://google.com/favicon.ico" alt="website-logo">-->
+                                        </div>
+                                        <a class="col text-bold" href="#btn1" onclick="addPluginCard('{{list_item|striptags|title}}', 'card2')">    <!-- TODO replace the hardcoded parent, with a logically calculated parent -->
+                                            {{ list_item }}
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </div>
+                                <div class="col">
+                                    {% for list_item in last_eight_list_of_default_plugins %}
+                                    <!-- Display the last 8 plugins out of 16 -->
+                                    <li class="row mx-1 mb-1 my-3" style="list-style-type: none">
+                                        <!-- For removing the bullets in a list -->
+                                        <div class="card rounded-2 p-0" style="width: 22px; height: 22px">
+                                            <i class="material-icons" style="color: darkslategray">draw</i>
+                                            <!-- <img src="https://google.com/favicon.ico" alt="website-logo">-->
+                                        </div>
+                                        <a class="col text-bold" href="#btn1" onclick="addPluginCard('{{list_item|striptags|title}}', 'card2')">
+                                            {{ list_item }}
+                                        </a>
+                                    </li>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <span class="row text-sm align-items-center justify-content-center mt-5 font-italic font-weight-light">and {{number_of_plugins_left}} more...</span>
+
+                        </div>
+
+                        <div class="col-lg-6 col-sm-12 text-bold border-start mt-3 ps-4 mb-3">
+                            <span class="ps-4">Choose Input:</span>
+
+                            <!-- API Div-->
+                            <div class="row min-height-100 mx-4 card mt-3" style="background-color: #F0F2F5">
+                                <h6 class="mt-3">1. From API</h6>
+                                <hr class="mt-0 w-95 ms-2">
+                                <span class="ms-2 text-sm">Select APIs from existing plugins:</span>
+                                <div class="pe-md-3 mt-3 ms-2">
+                                    <div class="input-group input-group-outline me-4 w-90">
+                                        <label class="form-label">Search API plugins...</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+
+                            <!-- Local files Div-->
+                            <div class="row min-height-100 mx-4 card my-4" style="background-color: #F0F2F5">
+                                <h6 class="mt-3">2. From Local Files</h6>
+                                <hr class="mt-0 w-95 ms-2">
+                                <span class="ms-2 text-sm">Upload files from your local computer:</span>
+                                <div class="row align-items-center justify-content-center">
+                                    <label for="file-upload"
+                                           class="col-sm-5 align-items-center justify-content-center custom-file-upload mt-4 mb-0 text-light bold text-center">
+                                        Upload
+                                    </label>
+                                </div>
+
+                                <input id="file-upload1" type="file"/>
+                                <span class="text-center text-sm mb-3">.csv, .json, .txt</span>
+                            </div>
+
+                            <!--From online database-->
+                            <div class="row min-height-100 mx-4 card my-4" style="background-color: #F0F2F5">
+                                <h6 class="mt-3">3. From online database</h6>
+                                <hr class="mt-0 w-95 ms-2">
+                                <span class="ms-2 text-sm">Input URL of the online data source:</span>
+                                <div class="pe-md-3 mt-3">
+                                    <div class="input-group input-group-outline ms-2 mb-4 w-90">
+                                        <label class="form-label">Enter URL...</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add workflow button-->
+            <div id="btn2" class="my-0">
+                <hr class="mt-0" width="1" size="170"
+                    style="z-index: 0; position: absolute; margin-left: auto; margin-right: auto; text-align: center; left: 0; right: 0;">
+                <div class="text-center align-items-center mt-3"
+                     style="z-index: 1; position: absolute; margin-left: auto; margin-right: auto; text-align: center; left: 0; right: 0;">
+                    <a onclick="add_workflow_card(2)">
+                        <i class="row material-icons justify-content-center opacity-10 text-dark "
+                           style="font-size: 35px; fill: black; position: relative">add_circle</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--        template card -->
+        <!--        <div>-->
+        <!--            <div class="row mt-6">-->
+        <!--                <div class="card" style="background-color: #C7CCD0">-->
+        <!--                    <div class="card-header p-0 pt-0" style="background-color: #C7CCD0">-->
+        <!--                        <h4 class="mb-0">-->
+        <!--                            <div class="row d-inline-flex">-->
+        <!--                                <div class="card" style="background-color: #272628; width: 62px; height: 52px">-->
+        <!--                                    <i class="draw-icon-sizing text-light material-icons opacity-10 mt-1 ms-0 md-light"-->
+        <!--                                       style="font-size: 40px">-->
+        <!--                                        extension-->
+        <!--                                    </i>-->
+        <!--                                </div>-->
+        <!--                                <span class="processingtab col mt-2 mb-2" style="color: black">-->
+        <!--                                    Processing-->
+        <!--                                </span>-->
+        <!--                            </div>-->
+        <!--                        </h4>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="row">-->
+        <!--                <div class="card min-height-100 container">-->
+        <!--                    <div class="row container mt-3">-->
+        <!--                        <div class="card rounded-2 p-0" style="width: 30px; height: 30px">-->
+        <!--                            <i class="material-icons" style="color: darkslategray; font-size: 30px">draw</i>-->
+        <!--                        </div>-->
+        <!--                        <div class="col text-lg text-dark mt-1">Dandelion Plugin</div>-->
+        <!--                    </div>-->
+        <!--                    <div class="ms-5 font-italic p-1 text-sm">www.dandelion.eu</div>-->
+
+        <!--                    <div class="row justify-content-center align-items-center">-->
+        <!--                        <hr class="mt-0 w-90 ">-->
+        <!--                    </div>-->
+
+        <!--                    <div class="container ms-4 ps-4 mb-5">-->
+        <!--                        <div class="text-bold text-dark">Chosen Plugin</div>-->
+        <!--                        <a href="#" class="row ms-0">-->
+        <!--                            <div class="card border mt-2 w-95" style="height: 55px">-->
+        <!--                                <div class="row ms-0 mt-3">-->
+        <!--                                    <div class="card col-4 rounded-2 p-0" style="width: 26px; height: 26px">-->
+        <!--                                        <i class="material-icons" style="color: darkslategray; font-size: 25px">draw</i>-->
+        <!--                                    </div>-->
+        <!--                                    <div class="text-dark text-md col-4">Dandelion Plugin</div>-->
+        <!--                                    <btn id = "change-btn" class="offset-lg-6 offset-sm-3 col-lg-1 col-sm-3 text-center me-0"-->
+        <!--                                         style="border-color: black; border-style: solid; border-width: 1px; border-radius: 4px;">-->
+        <!--                                        <span class="text-center text-dark text-bold">-->
+        <!--                                            Change-->
+        <!--                                        </span>-->
+        <!--                                    </btn>-->
+        <!--                                </div>-->
+        <!--                            </div>-->
+        <!--                        </a>-->
+
+        <!--                        <div class="text-bold text-dark mt-4">Job Events</div>-->
+
+        <!--                        &lt;!&ndash; Plugin methods &ndash;&gt;-->
+
+
+        <!--                        <a href="#" class="row ms-0">-->
+        <!--                            <div class="card border mt-2 w-95" style="box-shadow: none">-->
+        <!--                                <div class="row ms-0 mt-3">-->
+        <!--                                    <div class="card col-4 rounded-2 p-0"-->
+        <!--                                         style="width: 26px; height: 26px; box-shadow: none">-->
+        <!--                                        <i class="material-icons" style="color: darkslategray; font-size: 25px">expand_more</i>-->
+        <!--                                    </div>-->
+        <!--                                    <div class="text-dark text-md col text-bold">Authenticate</div>-->
+        <!--                                </div>-->
+        <!--                                <div class="text-xs text-dark ms-4 ps-2 pt-1 mb-2">Authenticate the API access</div>-->
+        <!--                            </div>-->
+        <!--                        </a>-->
+
+        <!--                        <a href="#" class="row ms-0">-->
+        <!--                            <div class="card border mt-2 w-95" style="box-shadow: none;">-->
+        <!--                                <div class="row ms-0 mt-3">-->
+        <!--                                    <div class="card col-4 rounded-2 p-0"-->
+        <!--                                         style="width: 26px; height: 26px; box-shadow: none">-->
+        <!--                                        <i class="material-icons" style="color: darkslategray; font-size: 25px">expand_more</i>-->
+        <!--                                    </div>-->
+        <!--                                    <div class="text-dark text-md col text-bold">Extract Entities</div>-->
+        <!--                                </div>-->
+        <!--                                <span class="text-xs text-dark ms-4 ps-2 pt-1 mb-2">Extract the main entities from the text provided</span>-->
+        <!--                            </div>-->
+        <!--                        </a>-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <!--Output card-->
+        <div id="card1000">
+            <div class="row mt-6">
+                <div class="card" style="background-color: #C7CCD0">
+                    <div class="card-header p-0 pt-0" style="background-color: #C7CCD0">
+                        <h4 class="mb-0">
+                            <div class="row d-inline-flex">
+                                <div class="card" style="background-color: #272628; width: 62px; height: 52px">
+                                    <i class="draw-icon-sizing text-light material-icons opacity-10 mt-1 ms-0 md-light"
+                                       style="font-size: 40px">
+                                        flash_on
+                                    </i>
+                                </div>
+                                <span id="processingtab1000" class="processingtab col mt-2 mb-2" style="color: black">
+                                    Output
+                                </span>
+                            </div>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card min-height-100"></div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</main>
+
+<!--   Core JS Files   -->
+<script src="../static/assets/js/core/popper.min.js"></script>
+<script src="../static/assets/js/core/bootstrap.min.js"></script>
+<script src="../static/assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="../static/assets/js/plugins/smooth-scrollbar.min.js"></script>
+<script src="../static/assets/js/plugins/chartjs.min.js"></script>
+<script>
+    var ctx = document.getElementById("chart-bars").getContext("2d");
+
+    new Chart(ctx, {
+        type: "bar",
+        data: {
+            labels: ["M", "T", "W", "T", "F", "S", "S"],
+            datasets: [{
+                label: "Sales",
+                tension: 0.4,
+                borderWidth: 0,
+                borderRadius: 4,
+                borderSkipped: false,
+                backgroundColor: "rgba(255, 255, 255, .8)",
+                data: [50, 20, 10, 22, 50, 10, 40],
+                maxBarThickness: 6
+            },],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: true,
+                        drawOnChartArea: true,
+                        drawTicks: false,
+                        borderDash: [5, 5],
+                        color: 'rgba(255, 255, 255, .2)'
+                    },
+                    ticks: {
+                        suggestedMin: 0,
+                        suggestedMax: 500,
+                        beginAtZero: true,
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 300,
+                            family: "Roboto",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                        color: "#fff"
+                    },
+                },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: true,
+                        drawOnChartArea: true,
+                        drawTicks: false,
+                        borderDash: [5, 5],
+                        color: 'rgba(255, 255, 255, .2)'
+                    },
+                    ticks: {
+                        display: true,
+                        color: '#f8f9fa',
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 300,
+                            family: "Roboto",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+            },
+        },
+    });
+
+
+    var ctx2 = document.getElementById("chart-line").getContext("2d");
+
+    new Chart(ctx2, {
+        type: "line",
+        data: {
+            labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            datasets: [{
+                label: "Mobile apps",
+                tension: 0,
+                borderWidth: 0,
+                pointRadius: 5,
+                pointBackgroundColor: "rgba(255, 255, 255, .8)",
+                pointBorderColor: "transparent",
+                borderColor: "rgba(255, 255, 255, .8)",
+                borderColor: "rgba(255, 255, 255, .8)",
+                borderWidth: 4,
+                backgroundColor: "transparent",
+                fill: true,
+                data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                maxBarThickness: 6
+
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: true,
+                        drawOnChartArea: true,
+                        drawTicks: false,
+                        borderDash: [5, 5],
+                        color: 'rgba(255, 255, 255, .2)'
+                    },
+                    ticks: {
+                        display: true,
+                        color: '#f8f9fa',
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 300,
+                            family: "Roboto",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                        borderDash: [5, 5]
+                    },
+                    ticks: {
+                        display: true,
+                        color: '#f8f9fa',
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 300,
+                            family: "Roboto",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+            },
+        },
+    });
+
+    var ctx3 = document.getElementById("chart-line-tasks").getContext("2d");
+
+    new Chart(ctx3, {
+        type: "line",
+        data: {
+            labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            datasets: [{
+                label: "Mobile apps",
+                tension: 0,
+                borderWidth: 0,
+                pointRadius: 5,
+                pointBackgroundColor: "rgba(255, 255, 255, .8)",
+                pointBorderColor: "transparent",
+                borderColor: "rgba(255, 255, 255, .8)",
+                borderWidth: 4,
+                backgroundColor: "transparent",
+                fill: true,
+                data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                maxBarThickness: 6
+
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false,
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            scales: {
+                y: {
+                    grid: {
+                        drawBorder: false,
+                        display: true,
+                        drawOnChartArea: true,
+                        drawTicks: false,
+                        borderDash: [5, 5],
+                        color: 'rgba(255, 255, 255, .2)'
+                    },
+                    ticks: {
+                        display: true,
+                        padding: 10,
+                        color: '#f8f9fa',
+                        font: {
+                            size: 14,
+                            weight: 300,
+                            family: "Roboto",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+                x: {
+                    grid: {
+                        drawBorder: false,
+                        display: false,
+                        drawOnChartArea: false,
+                        drawTicks: false,
+                        borderDash: [5, 5]
+                    },
+                    ticks: {
+                        display: true,
+                        color: '#f8f9fa',
+                        padding: 10,
+                        font: {
+                            size: 14,
+                            weight: 300,
+                            family: "Roboto",
+                            style: 'normal',
+                            lineHeight: 2
+                        },
+                    }
+                },
+            },
+        },
+    });
+</script>
+
+<script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+        var options = {
+            damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+</script>
+
+<!--
+    "Add Workflow Button" logic - to access jinja variables of this file, included the js logic under an
+    inline <script> tag instead of a separate file. Might find a better way to achieve the same functionality
+    instead of an inline <script> tag. TODO
+-->
+<script>
+    let id_counter = 2;
+    console.log("Printing script id counter before execution of html");
+
+    // load the existing workflow for the current session
+    if (sessionStorage.getItem("pressed_continue_btn") === "true") loadWorkflow();
+
+    let list_of_cards = [];
+
+    // // add initial elements
+    let card_0 = document.getElementById("card0");         // choose input card
+    let card_1 = document.getElementById("card1");         // Processing card
+    let card_1000 = document.getElementById("card1000");   // output card, max. 1000 cards are allowed
+
+    list_of_cards.push(card_0, card_1, card_1000);
+
+    function updateSerialNumber() {
+        let processing_tab_elements = document.getElementsByClassName("processingtab");
+        let counter = 1;
+        for (let i = 0; i < processing_tab_elements.length; i++) {
+            // assign the new id of the current card
+            processing_tab_elements[i].id = "processingtabheading" + counter.toString();
+
+            // insert the serial number for the card; "afterbegin" parameter docs - https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentHTML
+            let card_heading = document.getElementById("processingtabheading" + counter.toString());
+
+            // remove the existing card heading
+            card_heading.innerHTML = "";
+
+            // update the heading with the latest serial number (after adding more cards, serial numbers need to be updated
+            if (processing_tab_elements[i].id === "processingtabheading1") {
+                card_heading.insertAdjacentHTML('afterbegin', counter.toString() + ". Input");
+            } else if (processing_tab_elements[i].id === `processingtabheading${processing_tab_elements.length}`) {
+                card_heading.insertAdjacentHTML('afterbegin', counter.toString() + ". Output");
+            } else {
+                console.log("hi Processing " + processing_tab_elements[i].id);
+                card_heading.insertAdjacentHTML('afterbegin', counter.toString() + ". Processing");
+            }
+
+            counter++;
+        }
+    }
+
+    // workflow_btn_id is the id of button (to create a new card) pressed (if any).
+    // parent_id default: -1
+    // workflow_btn_id default: 0
+    // if "only" workflow id is provided, it is implied that a default card is requested.
+    // if default_card = false, parent_id should mandatorily be provided.
+    // plugin_name is not empty when an api link has been clicked in the input card
+    function add_workflow_card(workflow_btn_id = 0, default_card = true, parent_id = -1, json_object) {
+        let card = document.createElement("div");
+        let add_workflow_btn = document.createElement("div");
+        // workflow_btn_id = parseInt(workflow_btn_id);
+
+        // same html code as of the processing card above (squished in 1 line)
+        if (default_card) {
+            card.innerHTML = '<div><div class="row mt-6"><div class="card" style="background-color: #C7CCD0"><div class="card-header p-0 pt-0" style="background-color: #C7CCD0"><h4 class="mb-0"><div class="row d-inline-flex"><div class="card" style="background-color: #272628; width: 62px; height: 52px"><i class="draw-icon-sizing text-light material-icons opacity-10 mt-1 ms-0 md-light" style="font-size: 40px">extension</i></div><span class="processingtab col mt-2 mb-2" style="color: black">Processing</span></div></h4></div></div></div>\n<div class="row "><div class="card min-height-100"><div class="row justify-content-center"><div class="col-md-5 mt-3 mb-4 me-6"><span class="text-bold">Choose from existing plugins:</span><div class="input-group input-group-outline mt-3 mb-3 me-4"><label class="form-label">Search API plugins...</label><input type="text" class="form-control"></div><div class="row"><div class="col">{% for list_item in first_eight_list_of_default_plugins %}<li class="row mx-1 mb-1 my-3" style="list-style-type: none"><div class="card rounded-2 p-0" style="width: 22px; height: 22px"><i class="material-icons" style="color: darkslategray">draw</i></div>  <a class="col text-bold" href="#btn1" onclick="addPluginCard(plugin_name)">{{ list_item }}</a></li>{% endfor %}</div><div class="col">{% for list_item in last_eight_list_of_default_plugins %}<li class="row mx-1 mb-1 my-3" style="list-style-type: none"><div class="card rounded-2 p-0" style="width: 22px; height: 22px"><i class="material-icons" style="color: darkslategray">draw</i></div><a class="col text-bold" href="#btn1" onclick="addPluginCard(plugin_name, -1)">{{ list_item }}</a></li>{% endfor %}</div></div><span class="row text-sm align-items-center justify-content-center mt-5 font-italic font-weight-light">and {{number_of_plugins_left}} more...</span></div><div class="col-md-6 text-bold border-start mt-3 ps-4 mb-3"><span class="ps-4">Choose Input:</span><div class="row min-height-100 mx-4 card mt-3" style="background-color: #F0F2F5"><h6 class="mt-3">1. From API</h6><hr class="mt-0 w-95 ms-2"><span class="ms-2 text-sm">Select APIs from existing plugins:</span><div class="pe-md-3 mt-3 ms-2"><div class="input-group input-group-outline me-4 w-90"><label class="form-label">Search API plugins...</label><input type="text" class="form-control"></div></div><br></div><div class="row min-height-100 mx-4 card my-4" style="background-color: #F0F2F5"><h6 class="mt-3">2. From Local Files</h6><hr class="mt-0 w-95 ms-2"><span class="ms-2 text-sm">Upload files from your local computer:</span><div class="row align-items-center justify-content-center"><label for="file-upload" class="col-sm-5 align-items-center justify-content-center custom-file-upload mt-4 mb-0 text-light bold text-center">Upload</label></div><input id="file-upload1" type="file"/><span class="text-center text-sm mb-3">.csv, .json, .txt</span></div><div class="row min-height-100 mx-4 card my-4" style="background-color: #F0F2F5"><h6 class="mt-3">3. From online database</h6><hr class="mt-0 w-95 ms-2"><span class="ms-2 text-sm">Input URL of the online data source:</span><div class="pe-md-3 mt-3"><div class="input-group input-group-outline ms-2 mb-4 w-90"><label class="form-label">Enter URL...</label><input type="text" class="form-control"></div></div></div></div></div></div></div></div>'
+        } else {
+            card.innerHTML = '<div><div class="row mt-6"><div class="card" style="background-color: #C7CCD0"><div class="card-header p-0 pt-0" style="background-color: #C7CCD0"><h4 class="mb-0"><div class="row d-inline-flex"><div class="card" style="background-color: #272628; width: 62px; height: 52px"><i class="draw-icon-sizing text-light material-icons opacity-10 mt-1 ms-0 md-light" style="font-size: 40px">extension</i></div><span class="processingtab col mt-2 mb-2" style="color: black">Processing</span></div></h4></div></div></div><div class="row"><div class="card min-height-100 container"><div class="row container mt-3"><div class="card rounded-2 p-0" style="width: 30px; height: 30px"><i class="material-icons" style="color: darkslategray; font-size: 30px">draw</i></div><div class="plugin-name col text-lg text-dark mt-1">'+ json_object.pluginname +'</div></div><a href="https://www.dandelion.eu" class="plugin-url ms-5 font-italic p-1 text-sm text-lighter">' + json_object.homePageUrl + '</a><div class="row justify-content-center align-items-center"><hr class="mt-0 w-90 "></div><div class="container ms-4 ps-4 mb-5"><div class="text-bold text-dark">Chosen Plugin</div><a href="#" class="row ms-0"><div class="card border mt-2 w-95" style="height: 55px"><div class="row ms-0 mt-3"><div class="card col-4 rounded-2 p-0" style="width: 26px; height: 26px"><i class="material-icons" style="color: darkslategray; font-size: 25px">draw</i></div><div class="chosen-plugin-name text-dark text-md col-4">' + json_object.pluginname + '</div><div class="change-btn offset-lg-6 offset-sm-3 col-lg-1 col-sm-3 text-center me-0" style="border-color: black; border-style: solid; border-width: 1px; border-radius: 4px;"><span class="text-center text-dark text-bold">Change</span></div></div></div></a><div class="text-bold text-dark mt-4">Job Events</div><div id=' + json_object.pluginname.replace(/\s/g, '').toLowerCase() + '-jobs></div><div class="display-output"></div></div></div></div></div>\n';
+            // card.innerHTML = '<div class="row mt-6"><div class="card min-height-100"></div></div>';
+        }
+
+        add_workflow_btn.innerHTML = '<div class="my-0"><hr class="mt-0" width="1" size="500" style="z-index: 0; position: absolute; margin-left: auto; margin-right: auto; text-align: center; left: 0; right: 0;"><div class="text-center align-items-center mt-3" style="z-index: 1; position: absolute; margin-left: auto; margin-right: auto; text-align: center; left: 0; right: 0;"><a onclick="add_workflow_card(\'' + id_counter + '\')"><i class="row material-icons justify-content-center opacity-10 text-dark " style="font-size: 35px; fill: black; position: relative">add_circle</i></a></div></div>';
+
+        card.id = "card" + id_counter;       // card id (for new cards apart from initial input, processing and output cards) starts from 2
+        add_workflow_btn.id = "btn" + (id_counter + 1);
+
+        card.append(add_workflow_btn);
+
+        console.log("number: " + id_counter + " Card ID: " + card.id + " Btn Id: " + add_workflow_btn.id);
+        console.log("card+(number-1): card" + (workflow_btn_id - 1).toString());
+
+        // document.body.append(card);
+        let curr_parent_card;
+        if (parent_id === -1) curr_parent_card = document.getElementById("card" + (workflow_btn_id - 1).toString());
+        else curr_parent_card = document.getElementById(parent_id.toString());
+
+        // document.getElementById("card" + (workflow_btn_id-1).toString());
+        // curr_parent_card.append(card);      // append inserts a new element, after the last child of the parent node.
+
+        console.log("Printing curr_parent_card: " + parent_id);
+        insertAfter(card, curr_parent_card);
+
+        // add the newest card in between the two cards (where the plus button was clicked)
+        let parent_card_idx = list_of_cards.findIndex(
+            element => element.getAttribute('id') === curr_parent_card.getAttribute('id'));
+
+        // insert the newly card after the parent card
+        list_of_cards.splice(parent_card_idx + 1, 0, card);
+        list_of_cards.join();
+
+        // update the serial numbers in front of the cards.
+        updateSerialNumber();
+
+        // print the list of cards to the console.log
+        list_of_cards.forEach(element => console.log(element));
+
+        // add the list_of_cards to the session storage of browser as a string
+        console.log("Printing list of card to string: " + list_of_cards.toString());
+
+        // create a list of card ids
+        let list_of_cards_ids = [];
+        for (let k = 0; k < list_of_cards.length; k++) {
+            console.log("Printing curr id from list_of_cards: " + list_of_cards[k].id);
+            list_of_cards_ids.push(list_of_cards[k].id);
+        }
+
+        console.log("Printing list of cards ids to string: " + list_of_cards_ids.toString());
+
+        // increment the cards and workflow counter
+        id_counter++;
+
+        // return the new card's id (if clicked through an api-link in input card) - to embed html in it in the ajax call
+        if (!default_card) return card.id;
+    }
+
+    // Upon inputting the text for entity extraction in dandelion plugin card,
+    // upon clicking the continue, restore the original workflow created from the previous session
+    // to the current session
+    function loadWorkflow() {
+        const xhttp = new XMLHttpRequest();
+
+        // create the existing workflow of the user
+        xhttp.onload = function () {
+            const json_workflow = this.responseText;
+            console.log("Response: " + json_workflow);
+            const json_workflow_object = JSON.parse(json_workflow);
+
+            let curr_workflow = json_workflow_object.workflows[0];
+
+            for (let i = 0; i < curr_workflow.workflow.length; i++) {
+                let curr_card = curr_workflow.workflow[i];
+                if (curr_card.PLUGIN_CARD != null) {
+                    let curr_plugin_name = curr_card.PLUGIN_CARD;
+                    addPluginCard(curr_plugin_name, "card" + (i - 1).toString());
+                }
+            }
+
+            // display the output at the bottom of the card
+            if (sessionStorage.getItem("pressed_continue_btn") === "true") {
+                let processing_card = document.getElementById("card1");
+                let new_child = document.createElement("div");
+                new_child.innerHTML = "<div class='row mt-6 mb-4'><div class='card border-2 p-4 text-dark border-dark'><span class='text-bold text-dark'>Output Type: </span> <span> List \< String \> </span> <br> <span class='text-bold text-dark mb-1'>Exact Output: </span> {% for list_item in list_of_entities %} \"{{list_item}}\";{% endfor %}</div></div>"
+                document.getElementById("card1-row").innerHTML = '<div class="row mt-0"> <div class="card" style="background-color: #C7CCD0"> <div class="card-header p-0 pt-0" style="background-color: #C7CCD0"> <h4 class="mb-0"> <div class="row d-inline-flex"> <div class="card" style="background-color: #272628; width: 62px; height: 52px"> <i class="draw-icon-sizing text-light material-icons opacity-10 mt-1 ms-0 md-light" style="font-size: 40px">extension </i> </div> <span class="processingtab col mt-2 mb-2" style="color: black">Processing </span> </div> </h4> </div> </div> </div>';
+                processing_card.insertBefore(new_child, processing_card.firstChild);
+
+                // scroll to the newly added "output type" card
+                document.getElementById("card1-row").scrollIntoView({behavior: 'smooth'});
+            }
+        };
+
+        xhttp.open("GET", "http://127.0.0.1:5000/static/user-workflow.json", true);
+        xhttp.send();
+    }
+
+</script>
+
+<!-- Github buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="../static/assets/js/material-dashboard.min.js?v=3.0.0"></script>
+
+<!--Helper JS files-->
+<script src="../../static/assets/js/processing-card-utils.js"></script>
+<script src="../../static/assets/js/workflow-button-utils.js"></script>
+
+</body>
+
+</html>
+
+
+<!--<div><div class="row mt-6"><div class="card" style="background-color: #C7CCD0"><div class="card-header p-0 pt-0" style="background-color: #C7CCD0"><h4 class="mb-0"><div class="row d-inline-flex"><div class="card" style="background-color: #272628; width: 62px; height: 52px"><i class="draw-icon-sizing text-light material-icons opacity-10 mt-1 ms-0 md-light" style="font-size: 40px">extension</i></div><span class="processingtab col mt-2 mb-2" style="color: black">Processing</span></div></h4></div></div></div><div class="row"><div class="card min-height-100 container"><div class="row container mt-3"><div class="card rounded-2 p-0" style="width: 30px; height: 30px"><i class="material-icons" style="color: darkslategray; font-size: 30px">draw</i></div><div class="col text-lg text-dark mt-1">Dandelion Plugin</div></div><div class="ms-5 font-italic p-1 text-sm">www.dandelion.eu</div><div class="row justify-content-center align-items-center"><hr class="mt-0 w-90 "></div><div class="container ms-4 ps-4 mb-5"><div class="text-bold text-dark">Chosen Plugin</div><a href="#" class="row ms-0"><div class="card border mt-2 w-95" style="height: 55px"><div class="row ms-0 mt-3"><div class="card col-4 rounded-2 p-0" style="width: 26px; height: 26px"><i class="material-icons" style="color: darkslategray; font-size: 25px">draw</i></div><div class="text-dark text-md col-4">Dandelion Plugin</div><btn id = "change-btn" class="offset-6 col-lg-1 col-md-2 text-center me-0" style="border-color: black; border-style: solid; border-width: 1px; border-radius: 4px;"><span class="text-center text-dark text-bold">Change</span></btn></div></div></a><div class="text-bold text-dark mt-4">Job Events</div><a href="#" class="row ms-0"><div class="card border mt-2 w-95" style="box-shadow: none"><div class="row ms-0 mt-3"><div class="card col-4 rounded-2 p-0" style="width: 26px; height: 26px; box-shadow: none"><i class="material-icons" style="color: darkslategray; font-size: 25px">expand_more</i></div><div class="text-dark text-md col text-bold">Authenticate</div></div><div class="text-xs text-dark ms-4 ps-2 pt-1 mb-2">Authenticate the API access</div></div></a><a href="#" class="row ms-0"><div class="card border mt-2 w-95" style="box-shadow: none;"><div class="row ms-0 mt-3"><div class="card col-4 rounded-2 p-0" style="width: 26px; height: 26px; box-shadow: none"><i class="material-icons" style="color: darkslategray; font-size: 25px">expand_more</i></div><div class="text-dark text-md col text-bold">Extract Entities</div></div><span class="text-xs text-dark ms-4 ps-2 pt-1 mb-2">Extract the main entities from the text provided</span></div></a></div></div></div></div>-->
